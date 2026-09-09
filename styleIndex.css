@@ -1,0 +1,322 @@
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #f5f7fb;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+        /* =====================================================
+           SIDEBAR
+        ===================================================== */
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+
+            width: 250px;
+            height: 100vh;
+
+            background: #111827;
+            color: white;
+
+            padding: 25px 15px;
+
+            z-index: 1000;
+        }
+
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+
+            padding: 10px 15px 30px;
+        }
+
+
+        .logo i {
+            color: #3b82f6;
+        }
+
+
+        .menu-title {
+            font-size: 11px;
+            color: #9ca3af;
+
+            margin: 20px 15px 8px;
+
+            text-transform: uppercase;
+        }
+
+
+        .sidebar a {
+            display: flex;
+            align-items: center;
+
+            gap: 12px;
+
+            padding: 12px 15px;
+
+            margin-bottom: 4px;
+
+            border-radius: 8px;
+
+            color: #d1d5db;
+
+            text-decoration: none;
+
+            transition: .2s;
+        }
+
+
+        .sidebar a:hover,
+        .sidebar a.active {
+            background: #2563eb;
+            color: white;
+        }
+
+
+        .sidebar a i {
+            font-size: 18px;
+        }
+
+
+        /* =====================================================
+           CONTEÚDO
+        ===================================================== */
+
+        .main {
+            margin-left: 250px;
+            padding: 25px;
+        }
+
+
+        .topbar {
+            display: flex;
+
+            justify-content: space-between;
+            align-items: center;
+
+            margin-bottom: 25px;
+        }
+
+
+        .topbar h1 {
+            font-size: 26px;
+            font-weight: 700;
+
+            margin: 0;
+        }
+
+
+        .user {
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+        }
+
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+
+            border-radius: 50%;
+
+            background: #2563eb;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-weight: bold;
+        }
+
+
+        /* =====================================================
+           CARDS
+        ===================================================== */
+
+        .dashboard-card {
+            border: none;
+
+            border-radius: 14px;
+
+            background: white;
+
+            padding: 20px;
+
+            box-shadow: 0 3px 15px rgba(0,0,0,.05);
+
+            height: 100%;
+        }
+
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+
+            border-radius: 12px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 22px;
+        }
+
+
+        .blue {
+            background: #dbeafe;
+            color: #2563eb;
+        }
+
+
+        .green {
+            background: #dcfce7;
+            color: #16a34a;
+        }
+
+
+        .orange {
+            background: #ffedd5;
+            color: #ea580c;
+        }
+
+
+        .red {
+            background: #fee2e2;
+            color: #dc2626;
+        }
+
+
+        .purple {
+            background: #ede9fe;
+            color: #7c3aed;
+        }
+
+
+        .card-label {
+            color: #6b7280;
+
+            font-size: 14px;
+
+            margin-top: 15px;
+        }
+
+
+        .card-value {
+            font-size: 25px;
+
+            font-weight: 700;
+
+            color: #111827;
+        }
+
+
+        /* =====================================================
+           TABELAS
+        ===================================================== */
+
+        .section-card {
+            background: white;
+
+            border-radius: 14px;
+
+            padding: 20px;
+
+            box-shadow: 0 3px 15px rgba(0,0,0,.05);
+        }
+
+
+        .section-title {
+            font-size: 18px;
+
+            font-weight: 700;
+
+            margin-bottom: 20px;
+        }
+
+
+        table {
+            vertical-align: middle;
+        }
+
+
+        .status {
+            padding: 5px 10px;
+
+            border-radius: 20px;
+
+            font-size: 12px;
+
+            font-weight: 600;
+        }
+
+
+        .status-paga {
+            background: #dcfce7;
+            color: #15803d;
+        }
+
+
+        .status-aberta {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+
+        .status-cancelada {
+            background: #fee2e2;
+            color: #b91c1c;
+        }
+
+
+        /* =====================================================
+           RESPONSIVO
+        ===================================================== */
+
+        @media(max-width: 900px) {
+
+            .sidebar {
+                width: 70px;
+            }
+
+            .sidebar .logo span,
+            .sidebar a span,
+            .menu-title {
+                display: none;
+            }
+
+            .sidebar a {
+                justify-content: center;
+            }
+
+            .main {
+                margin-left: 70px;
+            }
+
+        }
+
+
+        @media(max-width: 600px) {
+
+            .main {
+                padding: 15px;
+            }
+
+            .topbar h1 {
+                font-size: 21px;
+            }
+
+        }
